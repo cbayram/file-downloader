@@ -1,0 +1,74 @@
+/**
+* In a production app, I'd opt for using @emotion/css, or some other CSS preprocessor.
+*/
+.file-downloader {
+  box-shadow: 2px 4px 4px #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  color: #666666;
+}
+.file-downloader input[type="checkbox"]:not([disabled]) {
+  cursor: pointer;
+}
+.file-downloader .file-action-bar {
+  display: flex;
+  padding: 16px 8px 8px 8px;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+.file-downloader .file-action-bar .files-selected-label {
+  flex-basis: 175px;
+}
+.file-downloader .file-action-bar .download-selected-files-button {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: #666666;
+}
+.file-downloader .file-action-bar .download-selected-files-button > span {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.file-downloader .file-action-bar .download-selected-files-button:disabled {
+  opacity: 0.75;
+}
+.file-downloader
+  .file-action-bar
+  .download-selected-files-button:not(:disabled) {
+  cursor: pointer;
+}
+.file-downloader table {
+  text-align: left;
+  border-collapse: collapse;
+}
+.file-downloader tr {
+  border-bottom: 1px solid #e1e1e1;
+}
+.file-downloader th {
+  padding: 16px 8px 8px 8px;
+  font-weight: normal;
+}
+.file-downloader td {
+  padding: 8px 8px 8px 8px;
+}
+.file-downloader td.status-icon {
+  text-align: right;
+  padding-right: 0px;
+}
+.file-downloader thead {
+  font-size: 1.25em;
+  font-weight: normal;
+}
+.file-downloader tbody tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+.file-downloader tbody tr:hover {
+  background-color: #eeeeee;
+}
+.file-downloader tbody tr:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+.file-downloader tbody tr[aria-selected="true"] {
+  background-color: #d3d3d3;
+}
